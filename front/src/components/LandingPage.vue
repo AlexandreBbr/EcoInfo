@@ -19,10 +19,6 @@
 </section>
 
 <section>
-  <PricingTable></PricingTable>
-</section>
-
-<section>
   <ContactForm></ContactForm>
 </section>
   

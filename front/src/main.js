@@ -5,9 +5,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from './components/LandingPage.vue'
 import PageFoundTroll from './components/PageFoundTroll.vue'
 import NotFoundPage from './components/NotFoundPage.vue'
+import EducationPage from './components/EducationPage.vue'
 
 const routes = [
   { path: '/', component: LandingPage },
+  { path: '/education', component: EducationPage},
   { path: '/PageFound', component: PageFoundTroll,
   beforeEnter: (to, from, next) => {
     const youtubeURL = 'https://www.youtube.com/watch?v=Sagg08DrO5U';
