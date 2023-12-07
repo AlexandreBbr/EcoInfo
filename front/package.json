@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "apexcharts": "^3.44.0",
-    "axios": "^1.6.0",
+    "apexcharts": "^3.44.2",
+    "axios": "^1.6.2",
     "flatpickr": "^4.6.13",
-    "flowbite": "^1.8.1",
-    "vue": "^3.3.4",
+    "flowbite": "^2.2.0",
+    "vue": "^3.3.10",
     "vue-flatpickr-component": "^11.0.3",
     "vue-router": "^4.2.5",
     "vue-scrollto": "^2.20.0"
