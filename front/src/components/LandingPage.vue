@@ -17,10 +17,6 @@
 <section>
   <TeamCarousel></TeamCarousel>
 </section>
-
-<section>
-  <ContactForm></ContactForm>
-</section>
   
   </div>
 </template>
@@ -41,8 +37,6 @@
 
 <script>
 import { Transition } from "vue";
-import ContactForm from './Items/ContactForm.vue';
-import PricingTable from './Items/PricingTable.vue';
 import Navbar from './Items/Navbar.vue';
 import TeamCarousel from './Items/TeamCarousel.vue';
 import Features from './Items/Features.vue';
@@ -55,6 +49,6 @@ export default {
     props: {
         msg: String
     },
-    components: { ContactForm, PricingTable, Navbar, TeamCarousel, Features, Hero, Header }
+    components: { Navbar, TeamCarousel, Features, Hero, Header }
 }
 </script>

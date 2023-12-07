@@ -4,72 +4,74 @@
   
       <section class="py-8">
         <div class="container mx-auto">
-          <h2 class="text-3xl font-semibold mb-4">Introduction to Climate Change</h2>
-          <p class="text-gray-700">
-            Climate change refers to significant, long-term changes in the average temperature, weather patterns, and other climate parameters on Earth.
-            This section provides a brief overview of the key concepts and factors contributing to climate change.
-          </p>
+          <h2 class="text-3xl font-semibold mb-4">Quiz Écologique</h2>
+  
+          <!-- Question 1 -->
+          <div v-if="currentQuestionIndex === 0">
+            <p class="text-lg mb-2">Question 1: Le recyclage contribue à la réduction des déchets.</p>
+            <button @click="checkAnswer(true)" class="btn-quiz">Vrai</button>
+            <button @click="checkAnswer(false)" class="btn-quiz">Faux</button>
+          </div>
+  
+          <div v-if="answerVisible" class="mt-4">
+            <p>Réponse: Vrai</p>
+            <p>{{ answerExplanation[currentQuestionIndex] }}</p>
+          </div>
+  
+          <button v-if="answerVisible" @click="nextQuestion" class="btn-next">Suivant</button>
         </div>
       </section>
-  
-      <section class="py-8 bg-gray-100">
-        <div class="container mx-auto">
-          <h2 class="text-3xl font-semibold mb-4">Solutions to Climate Change</h2>
-          <p class="text-gray-700">
-            Explore sustainable solutions and practices that can help mitigate the impact of climate change.
-            This section highlights actions individuals and communities can take to contribute to a more sustainable future.
-          </p>
-        </div>
-      </section>
-  
-      <section class="py-8">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-semibold mb-4">Impact of Climate Change on Ecosystems</h2>
-        <p class="text-gray-700">
-          Understand how climate change affects ecosystems, biodiversity, and natural habitats.
-          This section delves into the ecological consequences of global warming and related phenomena.
-        </p>
-        <canvas ref="ecosystemChart" width="400" height="200"></canvas>
-      </div>
-    </section>
     
     </div>
   </template>
   
   <script>
   import Navbar from './Items/Navbar.vue';
-  import Chart from 'chart.js/auto';
   
   export default {
     name: 'EducationPage',
     components: { Navbar },
-    mounted() {
-      const ecosystemData = {
-        labels: ['Forest', 'Ocean', 'Polar Regions', 'Grasslands', 'Urban Areas'],
-        datasets: [{
-          label: 'Impact on Ecosystems',
-          backgroundColor: '#36A2EB',
-          borderColor: '#36A2EB',
-          borderWidth: 1,
-          data: [4, 3, 2, 5, 1],
-        }],
+    data() {
+      return {
+        answerCorrect: null,
+        answerExplanation: [
+          "Le recyclage contribue à la réduction des déchets en réutilisant des matériaux plutôt que de les jeter.",
+        ],
+        currentQuestionIndex: 0,
+        answerVisible: false,
       };
-  
-      const ecosystemChartOptions = {
-        scales: {
-          y: {
-            beginAtZero: true,
-          },
-        },
-      };
-  
-      const ecosystemChart = new Chart(this.$refs.ecosystemChart, {
-        type: 'bar',
-        data: ecosystemData,
-        options: ecosystemChartOptions,
-      });
+    },
+    methods: {
+      checkAnswer(userAnswer) {
+        this.answerCorrect = userAnswer === true;
+        this.answerVisible = true;
+      },
+      nextQuestion() {
+        this.currentQuestionIndex++;
+        this.answerVisible = false;
+      },
     },
   };
   </script>
-
+  
+  <style>
+  .btn-quiz {
+    background-color: white;
+    border: 1px solid #000;
+    color: #000;
+    padding: 8px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-next {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  
+  /* Ajoutez du style au besoin */
+  </style>
   
