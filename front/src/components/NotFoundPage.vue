@@ -24,8 +24,8 @@
             </div>
         </section>
     </div>
+  <!-- you find the place, but i'm still lost, find the correct url! -->
 </template>
-  
 <script>
 import Navbar from './Items/Navbar.vue';
 import Tetris from './tetris.js';

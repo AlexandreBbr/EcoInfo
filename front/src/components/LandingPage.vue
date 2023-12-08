@@ -19,6 +19,7 @@
 </section>
   
   </div>
+  <!-- hi dude, what's up? try to educate yourself about ecology! -->
 </template>
 
 <style>

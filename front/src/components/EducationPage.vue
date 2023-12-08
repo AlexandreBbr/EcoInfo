@@ -5,7 +5,7 @@
         <section class="py-8 flex justify-center items-center bg-question-section h-screen">
             <div v-if="!quizComplete" class="container mx-auto bg-white rounded p-8">
                 <h2 class="text-3xl font-semibold mb-4">Quiz Écologique</h2>
-
+                <!-- do you know who Rick Astley is? -->
                 <div v-if="currentQuestionIndex === 0" class="text-center">
                     <p class="text-lg mb-2">Le recyclage contribue à la réduction des déchets.</p>
                     <button @click="checkAnswer(true)"
@@ -51,6 +51,7 @@
         </section>
 
     </div>
+      <!-- i'm lost in a unknown place, can u find me? you have an hint here: http://localhost:5173/hint -->
 </template>
   
 <script>

@@ -6,6 +6,8 @@ import LandingPage from './components/LandingPage.vue'
 import PageFoundTroll from './components/PageFoundTroll.vue'
 import NotFoundPage from './components/NotFoundPage.vue'
 import EducationPage from './components/EducationPage.vue'
+import song from './components/song.vue'
+import music from './components/music.vue'
 
 const routes = [
   { path: '/', component: LandingPage },
@@ -13,9 +15,24 @@ const routes = [
   { path: '/PageFound', component: PageFoundTroll,
   beforeEnter: (to, from, next) => {
     const youtubeURL = 'https://www.youtube.com/watch?v=Sagg08DrO5U';
-    window.open(youtubeURL, '_blank');
-    next('/');
+    window.location.href = youtubeURL;
   } },
+  { path: '/hint', component: PageFoundTroll,
+  beforeEnter: (to, from, next) => {
+    const perduURL = 'https://perdu.com';
+    window.location.href = perduURL;
+  } },
+  { path: '/never', component: song},
+  { path: '/never/gonna', component: song},
+  { path: '/never/gonna/give', component: song},
+  { path: '/never/gonna/give/you', component: song},
+  { path: '/never/gonna/give/you/up', component: song},
+  { path: '/never/gonna/give/you/up/never', component: song},
+  { path: '/never/gonna/give/you/up/never/gonna', component: song},
+  { path: '/never/gonna/give/you/up/never/gonna/let', component: song},
+  { path: '/never/gonna/give/you/up/never/gonna/let/you', component: song},
+  { path: '/never/gonna/give/you/up/never/gonna/let/you/down', component: music},
+
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
