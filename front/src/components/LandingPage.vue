@@ -43,7 +43,6 @@ import Features from './Items/Features.vue';
 import Hero from './Items/Hero.vue';
 import Header from "./Items/Header.vue";
 
-
 export default {
     name: 'LandingPage',
     props: {
