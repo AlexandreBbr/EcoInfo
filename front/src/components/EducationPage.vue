@@ -35,14 +35,13 @@
                     </button>
                 </div>
 
-                <Transition name="fade">
                 <div v-if="answerVisible" class="mt-4 text-center">
                     <p>Réponse: Vrai</p>
                     <p>{{ answerExplanation[currentQuestionIndex].text }}</p>
-                    <p>Source: <a :href="answerExplanation[currentQuestionIndex].source" target="_blank">{{ answerExplanation[currentQuestionIndex].source }}</a></p>
+                    <p>Source: <a :href="answerExplanation[currentQuestionIndex].source" target="_blank">{{
+                        answerExplanation[currentQuestionIndex].source }}</a></p>
                     <button v-if="answerVisible" @click="nextQuestion" class="btn-next">Suivant</button>
                 </div>
-                </Transition>
 
             </div>
             <div v-else class="mx-auto bg-white rounded p-8 text-center">
@@ -65,11 +64,11 @@ export default {
             answerCorrect: null,
             answerExplanation: [
                 {
-                text: "Le recyclage contribue à la réduction des déchets en réutilisant des matériaux plutôt que de les jeter.",
-                source: "https://www.example.com",
+                    text: "Le recyclage contribue à la réduction des déchets en réutilisant des matériaux plutôt que de les jeter.",
+                    source: "https://www.example.com",
                 },
                 {
-                text: "Le CO2 participe activement à la respiration des êtres vivants et la photosynthèse des plantes.",
+                    text: "Le CO2 participe activement à la respiration des êtres vivants et la photosynthèse des plantes.",
                 }
             ],
             currentQuestionIndex: 0,
