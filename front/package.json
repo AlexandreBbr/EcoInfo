@@ -11,6 +11,7 @@
   "dependencies": {
     "apexcharts": "^3.44.2",
     "axios": "^1.6.2",
+    "chart.js": "^4.4.1",
     "flatpickr": "^4.6.13",
     "flowbite": "^2.2.0",
     "vue": "^3.3.10",

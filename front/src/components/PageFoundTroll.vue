@@ -1,10 +1,10 @@
 <template>
   <div>
-  <Navbar></Navbar>
+    <Navbar></Navbar>
 
-<section>
-  <HeaderFound></HeaderFound>
-</section>
+    <section>
+      <HeaderFound></HeaderFound>
+    </section>
 
   </div>
 </template>
@@ -35,10 +35,10 @@ import HeaderFound from "./Items/HeaderFound.vue";
 
 
 export default {
-    name: 'LandingPage',
-    props: {
-        msg: String
-    },
-    components: { Navbar, TeamCarousel, Features, Hero, Header, HeaderFound, },
+  name: 'LandingPage',
+  props: {
+    msg: String
+  },
+  components: { Navbar, TeamCarousel, Features, Hero, Header, HeaderFound, },
 }
 </script>
