@@ -9,15 +9,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google-cloud/translate": "^8.0.2",
     "apexcharts": "^3.44.2",
     "axios": "^1.6.2",
     "chart.js": "^4.4.1",
     "flatpickr": "^4.6.13",
     "flowbite": "^2.2.0",
+    "google-translate-api": "^2.3.0",
+    "mstranslator": "^3.0.0",
     "vue": "^3.3.10",
     "vue-flatpickr-component": "^11.0.3",
     "vue-router": "^4.2.5",
-    "vue-scrollto": "^2.20.0"
+    "vue-scrollto": "^2.20.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

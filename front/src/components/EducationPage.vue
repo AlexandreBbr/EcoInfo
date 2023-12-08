@@ -6,7 +6,6 @@
             <div v-if="!quizComplete" class="container mx-auto bg-white rounded p-8">
                 <h2 class="text-3xl font-semibold mb-4">Quiz Écologique</h2>
 
-                <!-- Question 1 -->
                 <div v-if="currentQuestionIndex === 0" class="text-center">
                     <p class="text-lg mb-2">Le recyclage contribue à la réduction des déchets.</p>
                     <button @click="checkAnswer(true)"
@@ -37,9 +36,10 @@
 
                 <div v-if="answerVisible" class="mt-4 text-center">
                     <p>Réponse: Vrai</p>
-                    <p>{{ answerExplanation[currentQuestionIndex].text }}</p>
-                    <p>Source: <a :href="answerExplanation[currentQuestionIndex].source" target="_blank">{{
-                        answerExplanation[currentQuestionIndex].source }}</a></p>
+                    <p style="padding: 20px;">{{ answerExplanation[currentQuestionIndex].text }}</p>
+                    <p style="padding: 20px;">Source: <a :href="answerExplanation[currentQuestionIndex].source"
+                            target="_blank">{{
+                                answerExplanation[currentQuestionIndex].source }}</a></p>
                     <button v-if="answerVisible" @click="nextQuestion" class="btn-next">Suivant</button>
                 </div>
 
@@ -65,10 +65,11 @@ export default {
             answerExplanation: [
                 {
                     text: "Le recyclage contribue à la réduction des déchets en réutilisant des matériaux plutôt que de les jeter.",
-                    source: "https://www.example.com",
+                    source: "https://www.novethic.fr/actualite/environnement/recyclage.html",
                 },
                 {
                     text: "Le CO2 participe activement à la respiration des êtres vivants et la photosynthèse des plantes.",
+                    source: "https://www.geo.fr/environnement/co2-quest-ce-que-le-dioxyde-de-carbone-193560",
                 }
             ],
             currentQuestionIndex: 0,
